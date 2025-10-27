@@ -830,6 +830,196 @@
                 font-size: 1.2rem;
             }
         }
+        /* ==================== EVENTS SECTION STYLES ==================== */
+.events-container {
+    display: flex;
+    justify-content: center;
+}
+
+.event-card {
+    text-align: center;
+    max-width: 800px;
+    width: 100%;
+}
+
+.event-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+    margin: 0 auto 1.5rem auto;
+    display: block;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border: 3px solid var(--accent-color);
+}
+
+.event-date {
+    font-size: 1.1rem;
+    color: var(--primary-dark);
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.event-content {
+    text-align: center;
+}
+
+.event-content h3 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.event-content p {
+    font-size: 1.1rem;
+    color: var(--dark-color);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.event-content .btn {
+    display: inline-block;
+    margin: 0 auto;
+}
+
+/* Responsive styles for events section */
+@media (min-width: 768px) {
+    .event-image {
+        max-width: 450px;
+        margin-bottom: 2rem;
+    }
+    
+    .event-date {
+        font-size: 1.2rem;
+    }
+    
+    .event-content h3 {
+        font-size: 1.8rem;
+    }
+    
+    .event-content p {
+        font-size: 1.2rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .event-image {
+        max-width: 500px;
+    }
+    
+    .event-date {
+        font-size: 1.3rem;
+    }
+    
+    .event-content h3 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .event-image {
+        max-width: 300px;
+        margin-bottom: 1rem;
+    }
+    
+    .event-date {
+        font-size: 1rem;
+    }
+    
+    .event-content h3 {
+        font-size: 1.3rem;
+    }
+    
+    .event-content p {
+        font-size: 1rem;
+    }
+}
+  /* Lightbox Styles for Event */
+  #lightbox-overlay {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    cursor: zoom-out;
+  }
+
+  #lightbox-overlay.active {
+    display: flex;
+  }
+
+  #lightbox-image {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  }
+
+  /* Event Layout */
+  .three-column-layout {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 2rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .event-card {
+    flex: 1 1 30%;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  }
+
+  .event-image {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    cursor: zoom-in;
+    transition: transform 0.3s ease;
+  }
+
+  .event-image:hover {
+    transform: scale(1.03);
+  }
+
+  .event-content h3 {
+    color: #1b4965;
+    margin-bottom: 0.5rem;
+  }
+
+  .event-content p {
+    color: #555;
+    line-height: 1.6;
+  }
+
+
+  /* Mobile Responsive */
+  @media (max-width: 900px) {
+    .three-column-layout {
+      flex-direction: column;
+      align-items: center;
+    }
+    .event-card {
+      flex: 1 1 100%;
+      max-width: 95%;
+    }
+  }
     </style>
     
     <!-- Playfair Display font -->
@@ -895,7 +1085,7 @@
     <!-- ==================== FIXED HEADER STRUCTURE ==================== -->
     <div class="page-wrapper">
         <header class="logo-header">
-            <img src="new dci logo (4).png" alt="Deccan Club Ireland Logo">
+            <img src="new dci logo (1).png" alt="Deccan Club Ireland Logo">
         </header>
         
         <section class="hero" id="home">
@@ -981,36 +1171,106 @@ the wider community.</p>
     </section>
 
     <!-- ==================== EVENTS SECTION ==================== -->
-    <section class="section" id="events">
-        <div class="container">
-            <div class="section-title">
-                <h2>Events</h2>
-            </div>
-            <!-- ==================== YOUTH MAGAZINE EVENT ==================== -->
-<section class="event-announcement-section" id="youth-magazine">
-    <div class="container">
-        <div class="event-announcement">
-            <!-- Add your image here -->
-            <img src="path-to-your-youth-magazine-image.jpg" alt="DCI Youth Magazine 3rd Edition Cover" class="event-image">
-            
-            <h1>Unveiling DCI Youth Magazine 3rd Edition</h1>
-            
-            <h2>DCI WINTER FAMILY GET TOGETHER</h2>
-            <h3>Full of Youth Activities</h3>
-            
-            <hr>
-            
-            <div class="event-date">Sat 1st Nov 2025</div>
-            
-            <div class="event-location">
-                Mountview Community Centre<br>
-                <strong>Dublin 15 - D15EY81</strong>
-            </div>
-        </div>
+<section class="section" id="events">
+  <div class="container">
+    <div class="section-title">
+      <h2>Events</h2>
     </div>
+
+    <div class="events-container three-column-layout">
+      <!-- Donation Appeal -->
+      <div class="event-card">
+        <a href="shuhada appeal.jpg" class="lightbox">
+          <img
+            src="shuhada appeal.jpg"
+            alt="Shaheed Bilal Masjid Donation Appeal - Shuhada Foundation"
+            class="event-image"
+          />
+        </a>
+        <div class="event-date">Community Support</div>
+        <div class="event-content">
+          <h3>Shuhada Foundation of Ireland</h3>
+          <p>
+            This winter, Deccan Club of Ireland proudly supports the
+            <strong>Shaheed Bilal Masjid Donation Appeal</strong>. Together, we
+            can help build a masjid and community centre for future generations.
+          </p>
+          <a
+            href="https://www.shuhadafoundation.org"
+            target="_blank"
+            class="btn"
+            >Learn More & Donate</a
+          >
+        </div>
+      </div>
+
+      <!-- Youth Magazine -->
+      <div class="event-card">
+        <a href="Youth Magazine 3rd Edition.jpg" class="lightbox">
+          <img
+            src="Youth Magazine 3rd Edition.jpg"
+            alt="DCI Youth Magazine 3rd Edition"
+            class="event-image"
+          />
+        </a>
+        <div class="event-date">
+          Assalamualaikum wa rehmatulahi wa barakatuhu, our community event Sat
+          1st Nov 2025
+        </div>
+        <div class="event-content">
+          <a href="https://formsubmit.co/el/papagi" class="btn">Contact Us</a>
+        </div>
+      </div>
+
+      <!-- Sponsors -->
+      <div class="event-card">
+        <a href="sponers winter event.jpg" class="lightbox">
+          <img
+            src="sponers winter event.jpg"
+            alt="Deccan Club Ireland Winter Event Sponsors"
+            class="event-image"
+          />
+        </a>
+        <div class="event-date">Winter Event 2025</div>
+        <div class="event-content">
+          <h3>Thank You to All Our Sponsors</h3>
+          <p>
+            We extend our heartfelt gratitude to all our sponsors for supporting
+            the Deccan Club of Ireland Winter Event 2025. Your generosity helps
+            strengthen our community spirit.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
-    <!-- ==================== PRAYER TIMETABLE ==================== -->
+<!-- Lightbox Modal -->
+<div id="lightbox-overlay">
+  <img id="lightbox-image" src="" alt="Expanded view" />
+</div>
+
+<script>
+  // Simple Vanilla JS Lightbox
+  const lightboxLinks = document.querySelectorAll(".lightbox");
+  const overlay = document.getElementById("lightbox-overlay");
+  const lightboxImage = document.getElementById("lightbox-image");
+
+  lightboxLinks.forEach(link => {
+    link.addEventListener("click", e => {
+      e.preventDefault();
+      const imgSrc = link.getAttribute("href");
+      lightboxImage.src = imgSrc;
+      overlay.classList.add("active");
+    });
+  });
+
+  overlay.addEventListener("click", () => {
+    overlay.classList.remove("active");
+  });
+</script>
+
+ <!-- ==================== PRAYER TIMETABLE ==================== -->
     <section class="section" id="prayer-timetable">
         <div class="container">
             <div class="section-title">
